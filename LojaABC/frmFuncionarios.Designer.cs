@@ -60,6 +60,7 @@ namespace LojaABC
             this.lblNome = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
+            this.btnTestaBanco = new System.Windows.Forms.Button();
             this.pnlCRUD.SuspendLayout();
             this.gpbFuncionarios.SuspendLayout();
             this.SuspendLayout();
@@ -88,9 +89,9 @@ namespace LojaABC
             this.pnlCRUD.Controls.Add(this.btnAlterar);
             this.pnlCRUD.Controls.Add(this.btnCadastrar);
             this.pnlCRUD.Controls.Add(this.btnNovo);
-            this.pnlCRUD.Location = new System.Drawing.Point(-2, 446);
+            this.pnlCRUD.Location = new System.Drawing.Point(-2, 436);
             this.pnlCRUD.Name = "pnlCRUD";
-            this.pnlCRUD.Size = new System.Drawing.Size(785, 114);
+            this.pnlCRUD.Size = new System.Drawing.Size(785, 124);
             this.pnlCRUD.TabIndex = 9;
             // 
             // btnLimpar
@@ -154,6 +155,7 @@ namespace LojaABC
             this.btnCadastrar.Text = "&Cadastrar";
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnNovo
             // 
@@ -170,6 +172,7 @@ namespace LojaABC
             // 
             // gpbFuncionarios
             // 
+            this.gpbFuncionarios.Controls.Add(this.btnTestaBanco);
             this.gpbFuncionarios.Controls.Add(this.btnCarregarCEP);
             this.gpbFuncionarios.Controls.Add(this.cbbEstado);
             this.gpbFuncionarios.Controls.Add(this.lblEstado);
@@ -233,7 +236,7 @@ namespace LojaABC
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(604, 264);
-            this.txtNumero.MaxLength = 200;
+            this.txtNumero.MaxLength = 10;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(58, 26);
             this.txtNumero.TabIndex = 7;
@@ -383,6 +386,16 @@ namespace LojaABC
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código";
             // 
+            // btnTestaBanco
+            // 
+            this.btnTestaBanco.Location = new System.Drawing.Point(525, 41);
+            this.btnTestaBanco.Name = "btnTestaBanco";
+            this.btnTestaBanco.Size = new System.Drawing.Size(137, 33);
+            this.btnTestaBanco.TabIndex = 19;
+            this.btnTestaBanco.Text = "Testa Banco";
+            this.btnTestaBanco.UseVisualStyleBackColor = true;
+            this.btnTestaBanco.Click += new System.EventHandler(this.btnTestaBanco_Click);
+            // 
             // frmFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,5 +448,6 @@ namespace LojaABC
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.ComboBox cbbEstado;
         private System.Windows.Forms.Button btnCarregarCEP;
+        private System.Windows.Forms.Button btnTestaBanco;
     }
 }
